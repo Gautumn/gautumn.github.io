@@ -108,20 +108,25 @@
 
 
 
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Gautumn">
-<meta property="og:url" content="https://gautumn.github.io/index.html">
+  <meta name="description" content="FPB has two functions: To provide a hardware breakpoint feature - generate a breakpoint event to the processor core To patch instruction or literal data by remaping a memory access in the CODE region">
+<meta name="keywords" content="Cortex-M3 Cortex-M4 Flash-Patch Breakpoint FPB">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Cortex-M3-M4 Flash Patch and Breakpoint(FPB)">
+<meta property="og:url" content="https://gautumn.github.io/2018/06/11/Cortex-M3-M4-Flash-Patch-and-Breakpoing-FPB/index.html">
 <meta property="og:site_name" content="Gautumn">
+<meta property="og:description" content="FPB has two functions: To provide a hardware breakpoint feature - generate a breakpoint event to the processor core To patch instruction or literal data by remaping a memory access in the CODE region">
 <meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2018-06-11T08:29:20.099Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Gautumn">
+<meta name="twitter:title" content="Cortex-M3-M4 Flash Patch and Breakpoint(FPB)">
+<meta name="twitter:description" content="FPB has two functions: To provide a hardware breakpoint feature - generate a breakpoint event to the processor core To patch instruction or literal data by remaping a memory access in the CODE region">
 
 
 
 
 
 
-  <link rel="canonical" href="https://gautumn.github.io/"/>
+  <link rel="canonical" href="https://gautumn.github.io/2018/06/11/Cortex-M3-M4-Flash-Patch-and-Breakpoing-FPB/"/>
 
 
 
@@ -131,7 +136,7 @@
   };
 </script>
 
-  <title>Gautumn</title>
+  <title>Cortex-M3-M4 Flash Patch and Breakpoint(FPB) | Gautumn</title>
   
 
 
@@ -178,8 +183,7 @@
     
   
 
-  <div class="container sidebar-position-left 
-  page-home">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -216,7 +220,7 @@
         
         
           
-          <li class="menu-item menu-item-home menu-item-active">
+          <li class="menu-item menu-item-home">
     <a href="/" rel="section">
       <i class="menu-item-icon fa fa-fw fa-home"></i> <br />Home</a>
   </li>
@@ -260,155 +264,9 @@
           
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://gautumn.github.io/2018/06/11/Calculate-the-Cortex-MX-instruction/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Gautumn">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Gautumn">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/06/11/Calculate-the-Cortex-MX-instruction/" itemprop="url">
-                  Calculate the Cortex-MX instruction
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-
-              
-                
-              
-
-              <time title="Created: 2018-06-11 16:14:27 / Modified: 16:48:55" itemprop="dateCreated datePublished" datetime="2018-06-11T16:14:27+08:00">2018-06-11</time>
-            
-
-            
-              
-
-              
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>The Cortex-M3/M4 support flash patch featrue with FPB component. Visit Flash Patch and Breakpoint for more.</p>
-<h3 id="BL-Instruction-definition"><a href="#BL-Instruction-definition" class="headerlink" title="BL Instruction definition"></a>BL Instruction definition</h3><p><img src="/2018/06/11/Calculate-the-Cortex-MX-instruction/bl-instruction.png" alt="BL Instruction"></p>
-<h3 id="Calculate-BL-instruction-example"><a href="#Calculate-BL-instruction-example" class="headerlink" title="Calculate BL instruction example"></a>Calculate BL instruction example</h3><p><img src="/2018/06/11/Calculate-the-Cortex-MX-instruction/calculate-bl-instruction.png" alt="Keil Assemble"></p>
-<p>Flash address: 0x00003548<br>PC value: 0x00003548 + 4<br>Function address: 0x00003590<br>Instruction code: F000F822  </p>
-<h3 id="Get-the-BL-instruction"><a href="#Get-the-BL-instruction" class="headerlink" title="Get the BL instruction"></a>Get the BL instruction</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">BranchWritePC(PC + imm32)  </span><br><span class="line">=&gt; imm32 = 0x00003590 - 0x0000354C = 0x44 = b'0000 0100 0100  </span><br><span class="line">SignExtend(S:I1:I2:imm10:imm11:<span class="string">'0'</span>, <span class="number">32</span>)  </span><br><span class="line">=&gt; S = <span class="number">0</span>  </span><br><span class="line">=&gt; I1 = <span class="number">0</span>  </span><br><span class="line">=&gt; I2 = <span class="number">0</span>  </span><br><span class="line">=&gt; imm10 = b'00 0000 0000 = 0  </span><br><span class="line">=&gt; imm11 = b'000 0010 0010 = 0x022</span><br><span class="line"></span><br><span class="line">I1 = NOT(J1 EOR S) = !(J1 ^ S)  </span><br><span class="line">=&gt; J1 = !I1 ^ S = <span class="number">1</span>  </span><br><span class="line">I2 = NOT(J2 EOR S) = !(J2 ^ S)  </span><br><span class="line">=&gt; J2 = !I2 ^ S = <span class="number">1</span></span><br></pre></td></tr></table></figure>
-<p>So the BL instruction is: F000F822</p>
-<h3 id="Code"><a href="#Code" class="headerlink" title="Code:"></a>Code:</h3><p><a href="https://github.com/Gautumn/Cortex-Mx-FPB" target="_blank" rel="noopener">Cortex-Mx-FPB</a></p>
-
-          
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
 
   
 
@@ -440,11 +298,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/06/11/Cortex-M3-M4-Flash-Patch-and-Breakpoing-FPB/" itemprop="url">
-                  Cortex-M3-M4 Flash Patch and Breakpoint(FPB)
-                </a>
+          <h1 class="post-title" itemprop="name headline">Cortex-M3-M4 Flash Patch and Breakpoint(FPB)
               
             
           </h1>
@@ -507,9 +361,7 @@
       
 
       
-        
-          
-            <h3 id="FPB-has-two-functions"><a href="#FPB-has-two-functions" class="headerlink" title="FPB has two functions:"></a>FPB has two functions:</h3><ul>
+        <h3 id="FPB-has-two-functions"><a href="#FPB-has-two-functions" class="headerlink" title="FPB has two functions:"></a>FPB has two functions:</h3><ul>
 <li>To provide a hardware breakpoint feature - generate a breakpoint event to the processor core</li>
 <li>To patch instruction or literal data by remaping a memory access in the CODE region to the SRAM region</li>
 </ul>
@@ -566,8 +418,6 @@
 </ol>
 </blockquote>
 
-          
-        
       
     </div>
 
@@ -585,14 +435,36 @@
 
     <footer class="post-footer">
       
-
+        <div class="post-tags">
+          
+            <a href="/tags/Cortex-M3-Cortex-M4-Flash-Patch-Breakpoint-FPB/" rel="tag"># Cortex-M3 Cortex-M4 Flash-Patch Breakpoint FPB</a>
+          
+        </div>
       
 
       
+      
+      
 
       
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/06/11/Calculate-the-Cortex-MX-instruction/" rel="prev" title="Calculate the Cortex-MX instruction">
+                Calculate the Cortex-MX instruction <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
       
-        <div class="post-eof"></div>
+
+      
       
     </footer>
   </div>
@@ -602,14 +474,19 @@
   </article>
 
 
-    
-  </section>
 
-  
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
           
+
+  
+
+
 
         </div>
         
@@ -630,8 +507,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -691,6 +577,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#FPB-has-two-functions"><span class="nav-number">1.</span> <span class="nav-text">FPB has two functions:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#FPB-register-description"><span class="nav-number">2.</span> <span class="nav-text">FPB register description</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Notes"><span class="nav-number">3.</span> <span class="nav-text">Notes:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Reference"><span class="nav-number">4.</span> <span class="nav-text">Reference:</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -818,6 +720,10 @@
   
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=6.3.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=6.3.0"></script>
+
+
 
   
 
